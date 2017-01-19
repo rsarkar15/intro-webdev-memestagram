@@ -5,11 +5,6 @@
 </head>
 <body>
     <h1>Here's your meme</h1>
-    <!--
-        <img src="{{meme_img}}" alt="meme image"/>
-    <strong>{{top_caption}}</strong>
-    <strong>{{bottom_caption}}</strong>
-        -->
     <canvas id="canvas"></canvas>
     <script>
     var canvas = document.getElementById('canvas');
@@ -17,6 +12,7 @@
     img.onload = function() {
         canvas.width = img.width;
         canvas.height = img.height;
+
         var ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
         ctx.font = "bold 75px Impact";
